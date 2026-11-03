@@ -1,0 +1,16 @@
+/* color pallet*/
+:root{
+    --color1: #000814;
+    --color2: #001d3d;
+    --color3: #003566;
+    --color4: #ffc300;
+    --color5: #ffd60a;
+}
+
+body{
+    background-color: var(--color1);
+}
+
+h1{
+    color: var(--color4);
+}
