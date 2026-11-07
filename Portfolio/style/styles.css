@@ -1,16 +1,206 @@
-/* color pallet*/
-:root{
-    --color1: #000814;
-    --color2: #001d3d;
-    --color3: #003566;
-    --color4: #ffc300;
-    --color5: #ffd60a;
+/* COLOR PALETTE */
+:root {
+    --color1: #000000;
+    --color2: #1A1A1A;
+    --color3: #1D1D1D;
+    --color4: #C4C4C4;
+    --color5: #D7D7D7;
+    --color6: #ffffff;
+    --color8: #909090;
 }
 
-body{
-    background-color: var(--color1);
+
+* {
+    box-sizing: border-box;
 }
 
-h1{
-    color: var(--color4);
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    z-index: -1;
+    width: 100%;
+    height: 110%;
+    background: linear-gradient(100deg, var(--color5) 45%, black 45%);
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 3vw;
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+    margin-left: 9vw;
+}
+
+#links {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    width: 45%;
+}
+
+.control-button {
+    font-weight: bold;
+    color: var(--color6);
+    font-size: 1vw;
+    cursor: pointer;
+    padding: 2%
+}
+
+.control-button:hover {
+    border: var(--color6) 1px solid;
+    border-radius: 30px;
+    background-color: var(--color6);
+    color: var(--color1);
+}
+
+#presentation {
+    margin-left: 12vw;
+    margin-top: 7vw;
+}
+
+#ime {
+    font-size: 4em;
+    margin-bottom: 0;
+}
+
+#title {
+    font-size: 1.5em;
+    color: var(--color8);
+    margin-top: 0;
+}
+
+footer {
+    background-color: var(--color2);
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color6);
+    font-size: 0.9em;
+}
+
+#backToTop {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#favicons {
+    width: 13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 20px 0;
+}
+
+.fav {
+    width: 30px;
+    height: auto;
+}
+
+.f {
+    width: 13px;
+    height: auto;
+}
+
+#favicons svg {
+    fill: var(--color5);
+}
+
+
+/* TABLET */
+@media screen and (max-width: 1024px) {
+
+    body,
+    html {
+        padding: 0;
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        width: 100vw;
+        height: 100vh;
+        font-size: 16px;
+    }
+
+    #bg {
+        z-index: -1;
+        position: relative;
+        width: 100%;
+        height: 95%;
+        background: linear-gradient(100deg, var(--color5) 45%, black 45%);
+    }
+
+    #navigation {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 3vw;
+    }
+
+    #logo {
+        width: 5vw;
+        height: auto;
+    }
+
+    #links {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        width: 45%;
+    }
+
+    /*navigacijski gumbi*/
+    .control-button {
+        font-weight: bold;
+        color: var(--color6);
+        font-size: 1vw;
+        cursor: pointer;
+        padding: 2%
+    }
+
+    .control-button:hover {
+        border: var(--color6) 1px solid;
+        border-radius: 30px;
+        background-color: var(--color6);
+        color: var(--color1);
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    #navigation {
+        padding: 15px 20px;
+    }
+
+    #links {
+        display: none;
+    }
+
+    #burger {
+        display: block;
+    }
+
+    #logo {
+        width: 100px;
+    }
 }
